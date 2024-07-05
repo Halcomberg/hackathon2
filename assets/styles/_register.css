@@ -3,4 +3,14 @@
     justify-content: center;
 }
 
+.form-agree input {
+    width: 35px ;
+    height: 65px ;
+    display: flex;
+    justify-content: center;
+}
 
+.button {
+    display: flex;
+    justify-content: center;
+}
