@@ -12,6 +12,9 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="overlay">            
+                <img class="logo" src="{{ asset('images/logo.png') }}" alt="logo-work-access">
+            {% block body %}{% endblock %}            
+        </div>
     </body>
 </html>

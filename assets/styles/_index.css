@@ -1,0 +1,19 @@
+.footer-index {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    width: 90%;
+    bottom: 0;
+    position: fixed;
+    margin-bottom: 1rem;
+}
+
+.buttom-buttons {
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around;
+    margin-top: 6rem;
+    width: 95%;
+    margin-bottom: 15rem;
+}
+

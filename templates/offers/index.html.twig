@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WorkAccess | Offres{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/_offers.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<div class="main">
+    {% for donnee in contents.data %}
+        <div class="cards">
+            Nom de l'entreprise : {{ donnee.company_name }}<br>
+            Titre du poste : {{ donnee.title }}<br>
+            {# Description du poste : {{ donnee.description|u.truncate(20)|striptags }}<br> #}
+            Situation géographique : {{ donnee.location }}<br>
+        </div>
+    {% endfor %}
+</div>
+
+    {{ include('include/_nav.html.twig') }}
+
+{% endblock %}

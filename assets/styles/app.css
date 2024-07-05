@@ -1,3 +1,108 @@
+@font-face {
+    font-family: 'atkinson';
+    src: 
+        url('../fonts/AtkinsonHyperlegible-Regular.ttf');
+}
+
+* {
+    font-family: 'atkinson';
+}
+
 body {
-    background-color: skyblue;
+    background-image: url('../images/background.png');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+html, body, main {
+    height: 100%;
+}
+
+.overlay {
+
+background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: absolute; */
+    height: 100%;
+
+
+}
+
+.logo {
+    width: 60%;
+    height: auto;
+    margin-top: 3rem;
+    opacity: 100%;
+    padding-bottom: 4rem;
+}
+
+.main-card {
+    background-color: #49b0d1;
+    border-radius: 15px;
+    height: auto;
+    width: 90%;
+    border: 2mm ridge rgba(211, 220, 50, .6);
+    margin-bottom: 2rem;
+}
+
+.main-card p, .main-card form {
+    font-size: 2.5rem;
+    color: white;
+    margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.btn-primary {
+    --bs-btn-bg: #4fae52;
+    --bs-btn-color: white;
+    --bs-btn-font-size: 3rem;
+    --bs-btn-hover-bg: grey;
+}
+
+.btn-secondary {
+    --bs-btn-bg: #49b0d1;
+    --bs-btn-color: white;
+    --bs-btn-font-size: 3rem;
+    --bs-btn-hover-bg: grey;
+}
+
+.centre {
+    text-align: center;
+}
+
+.form-field div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-navbar {
+    font-size: 2rem;
+    width: 50rem;
+    /* height: 8rem; */
+    bottom: 0;
+    position: fixed;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1b6984;
+    border: 2mm ridge rgba(211, 220, 50, .6);
+    border-radius: 15px;
+    padding: 1rem 0;
+    /* background-image: url('../images/background-nav.png'); */
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
+    /* background-clip: padding-box; */
+    /* background-position: center; */
+}
+
+.footer-navbar img {
+    width: 5rem;
 }

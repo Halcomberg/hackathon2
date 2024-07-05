@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Work Access | Inscription{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/_register.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="main-card">
+    <p>Remplissez le formulaire pour vous inscrire :</p>
+
+    {{ form_errors(registrationForm) }}
+
+    {{ form_start(registrationForm) }}
+        <div class="form-field">
+            {{ form_row(registrationForm.firstname, {
+                label: 'Prénom'
+            }) }}
+        </div>
+        <div class="form-field">
+        {{ form_row(registrationForm.lastname, {
+            label: 'Nom'
+        }) }}
+        </div>
+        <div class="form-field">
+        {{ form_row(registrationForm.email, {
+            label: 'Email'
+        }) }}
+        </div>
+        <div class="form-field">
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Mot de passe'
+        }) }}
+        </div>
+        <div class="form-field">
+        {{ form_row(registrationForm.address, {
+            label: 'Adresse'
+        }) }}
+        </div>
+        <div class="form-field">
+        {{ form_row(registrationForm.city, {
+            label: 'Ville'
+        }) }}
+        </div>
+        <div class="form-field">
+        {{ form_row(registrationForm.phone, {
+            label: 'Numéro de téléphone'
+        }) }}
+        </div>
+        {# <div class="form-field">
+        {{ form_row(registrationForm.url, {
+            label: 'Url photo de profile'
+        }) }}
+        </div> #}
+        <div class="form-field">
+        {{ form_row(registrationForm.agreeTerms, {
+            label: 'Accepter les conditions'
+        }) }}
+        </div>
+        <div class="button">
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+        </div>
+    {{ form_end(registrationForm) }}
+</div>
+
+{% endblock %}
