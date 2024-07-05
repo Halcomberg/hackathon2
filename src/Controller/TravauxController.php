@@ -12,6 +12,7 @@ class TravauxController extends AbstractController
     #[Route('/travaux', name: 'travaux')]
     public function index(): Response
     {
+        if ($this->getUser()) 
         return $this->render('travaux/travaux.html.twig', [
             'controller_name' => 'TravauxController',
         ]);
