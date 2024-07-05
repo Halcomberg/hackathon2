@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WorkAccess | Accueil{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/_index.css') }}">
+{% endblock %}
+{% block body %}
+
+<div class="main-card">
+<p class="centre">
+Nous sommes actuellement entrains d'améliorer la fonctionnalité, revenez plus tard.
+    <img src="{{ asset('images/travaux.png') }}" alt="Travaux-non-disponible">
+</div>
+
+{% if app.user %}
+    {{ include('include/_nav.html.twig') }}
+{% else %}
+    <div class="buttom-buttons">
+        <a class="btn btn-primary btn-lg" href="{{ path('app_register') }}">S'inscrire</a>
+        <a class="btn btn-secondary btn-lg" href="{{ path('app_login') }}">Connexion</a>
+    </div>
+
+<div class="footer-index">© Coryright 2024 - Wild Code School -<br>Alex | Anaé | Matthieu | Niko</div>
+{% endif %}
+
+{% endblock %}
